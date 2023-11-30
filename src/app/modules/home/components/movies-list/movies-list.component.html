@@ -9,26 +9,8 @@
   </button>
   <div class="flex overflow-x-clip md:mx-3 md:my-3">
     <ul id="scrollable">
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
-      </li>
-      <li>
-        <app-movie-card></app-movie-card>
+      <li *ngFor="let movie of movies">
+        <app-movie-card [movie]="movie"></app-movie-card>
       </li>
     </ul>
   </div>

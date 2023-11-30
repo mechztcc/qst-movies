@@ -1,6 +1,9 @@
-.card {
+.card, img {
   max-width: 300px;
   min-width: 250px;
+  min-height: 400px;
+  max-height: 400px;
+  object-fit: contain;
 }
 
 

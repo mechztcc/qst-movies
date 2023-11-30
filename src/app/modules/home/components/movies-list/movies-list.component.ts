@@ -3,6 +3,9 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
+import { Store } from '@ngrx/store';
+import { MovieInterface } from '../../shared/types/movie.interface';
+import * as selectors from '../../shared/store/movies.selectors';
 
 @Component({
   selector: 'app-movies-list',
@@ -11,8 +14,8 @@ import {
 })
 export class MoviesListComponent {
   @Input() title: string;
+  @Input() movies: MovieInterface[] = [];
 
-  
   icons = {
     right: faChevronRight,
     left: faChevronLeft,
@@ -20,7 +23,6 @@ export class MoviesListComponent {
 
   moveLeft() {
     const ul = document.getElementById('scrollable');
-
     let scrollCompleted = 0;
     let interval = setInterval(() => {
       ul.scrollLeft -= 15;
@@ -34,7 +36,6 @@ export class MoviesListComponent {
 
   moveRight() {
     const ul = document.getElementById('scrollable');
-
     let scrollCompleted = 0;
     let interval = setInterval(() => {
       ul.scrollLeft += 15;

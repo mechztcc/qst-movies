@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavegationBarComponent } from './shared/components/navegation-bar/navegation-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { StoreModule } from '@ngrx/store';
+import { moviesReducer } from './modules/home/shared/store/movies.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +17,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     NavegationBarComponent,
     FontAwesomeModule,
     FooterComponent,
+    StoreModule.forRoot({ movies: moviesReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent],
