@@ -22,7 +22,7 @@ export class MoviesListComponent {
   };
 
   moveLeft() {
-    const ul = document.getElementById('scrollable');
+    const ul = document.getElementById(this.title);
     let scrollCompleted = 0;
     let interval = setInterval(() => {
       ul.scrollLeft -= 15;
@@ -35,7 +35,7 @@ export class MoviesListComponent {
   }
 
   moveRight() {
-    const ul = document.getElementById('scrollable');
+    const ul = document.getElementById(this.title);
     let scrollCompleted = 0;
     let interval = setInterval(() => {
       ul.scrollLeft += 15;

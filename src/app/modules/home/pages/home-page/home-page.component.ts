@@ -10,11 +10,18 @@ import * as selectors from '../../shared/store/movies.selectors';
 })
 export class HomePageComponent {
   crime: MovieInterface[] = [];
+  comedy: MovieInterface[] = [];
   constructor(private store: Store<MovieInterface[]>) {}
 
   crimeCategory$ = this.store
     .select(selectors.crimeCategory)
     .subscribe((data) => {
       this.crime = data;
+    });
+
+  comedyCategory$ = this.store
+    .select(selectors.comedyCategory)
+    .subscribe((data) => {
+      this.comedy = data;
     });
 }

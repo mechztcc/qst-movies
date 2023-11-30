@@ -8,7 +8,7 @@
     <fa-icon [icon]="icons.left" class="dark:text-slate-700"></fa-icon>
   </button>
   <div class="flex overflow-x-clip md:mx-3 md:my-3">
-    <ul id="scrollable">
+    <ul [id]="title">
       <li *ngFor="let movie of movies">
         <app-movie-card [movie]="movie"></app-movie-card>
       </li>
