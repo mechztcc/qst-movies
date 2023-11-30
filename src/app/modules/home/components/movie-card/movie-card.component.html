@@ -1,16 +1,32 @@
-<div class="card rounded-lg relative mx-3 cursor-pointer">
+<div
+  class="card rounded-lg relative mx-3 cursor-pointer shadow-lg"
+  (mouseenter)="isHover = true"
+  (mouseleave)="isHover = false"
+>
   <img
     class="rounded-lg"
     src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15829_v_v13_aa.jpg"
     alt=""
   />
-  <footer class="absolute left-0 bottom-0 top-60 p-4">
+
+  <div class="play absolute top-1/2 w-full flex justify-center" *ngIf="isHover" (click)="onNavigate()">
+    <fa-icon [icon]="icons.play" [size]="'3x'" class=""></fa-icon>
+  </div>
+  <footer class="absolute left-0 bottom-0 top-50 p-4">
     <h3 class="text-white font-semibold text-1xl break-words">
       Forrest Gump: O contador de Histórias
     </h3>
-    <div class="">
-      <fa-icon [icon]="icons.star" class="text-yellow-500"></fa-icon>
-      <span class="text-white font-semibold ml-1">9.5</span>
+    <div class="flex items-center justify-between">
+      <div class="flex">
+        <fa-icon [icon]="icons.star" class="text-yellow-500"></fa-icon>
+        <span class="text-white font-semibold ml-1">9.5 (2.2 mi)</span>
+      </div>
+      <fa-icon [icon]="icons.heart" class="text-red-400"></fa-icon>
+    </div>
+    <div class="flex">
+      <span>1994</span>
+      <span class="mx-3">2h 22min</span>
+      <span class="mx-3">14</span>
     </div>
   </footer>
 </div>
