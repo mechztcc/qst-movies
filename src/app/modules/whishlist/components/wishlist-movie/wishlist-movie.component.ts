@@ -1,7 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Store } from '@ngrx/store';
 import { MovieInterface } from 'src/app/modules/home/shared/types/movie.interface';
 import { ScreenInformationService } from 'src/app/shared/services/screen-information/screen-information.service';
+import { WhislistActions } from '../../../whishlist/shared/store/whishlist.actions';
 
 @Component({
   selector: 'app-wishlist-movie',
@@ -13,8 +15,17 @@ export class WishlistMovieComponent {
 
   icons = {
     star: faStar,
-    remove: faTrash
+    remove: faTrash,
   };
 
-  constructor(public screen: ScreenInformationService) {}
+  constructor(
+    public screen: ScreenInformationService,
+    private store: Store<MovieInterface[]>
+  ) {}
+
+  onRemove() {
+    this.store.dispatch(
+      WhislistActions.removeMovie({ movieId: this.movie.id })
+    );
+  }
 }
