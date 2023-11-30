@@ -1,9 +1,13 @@
 <nav class="flex items-center justify-between shadow-lg bg-slate-900 p-4">
   <h1 class="text-5xl ml-3 dark:text-white text-slate-100">XPlay</h1>
-  <div class="flex text-white items-center">
-    <h2 class="text-2xl cursor-pointer mr-5">SEARCH</h2>
-    <h2 class="text-2xl cursor-pointer">TOP MOVIES</h2>
-    <h2 class="text-2xl mx-5 cursor-pointer">CATEGORIES</h2>
-    <h2 class="text-2xl mx-5 cursor-pointer">WISHLIST</h2>
+  <div class="flex text-white items-center" *ngIf="screen.innerWidth >= 535">
+    <h2 class="text-2xl cursor-pointer mr-5">
+      <fa-icon [icon]="icons.search"></fa-icon>
+      SEARCH
+    </h2>
+    <h2 class="text-2xl mx-5 cursor-pointer">
+      <fa-icon [icon]="icons.heart"></fa-icon>
+      Favorites
+    </h2>
   </div>
 </nav>
