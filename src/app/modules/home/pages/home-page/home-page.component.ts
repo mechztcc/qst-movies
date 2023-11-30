@@ -11,7 +11,7 @@ import * as selectors from '../../shared/store/movies.selectors';
 export class HomePageComponent {
   crime: MovieInterface[] = [];
   comedy: MovieInterface[] = [];
-  constructor(private store: Store<MovieInterface[]>) {}
+  constructor(public store: Store<MovieInterface[]>) {}
 
   crimeCategory$ = this.store
     .select(selectors.crimeCategory)

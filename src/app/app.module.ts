@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { StoreModule } from '@ngrx/store';
 import { moviesReducer } from './modules/home/shared/store/movies.reducer';
+import { whishlistReducer } from './modules/whishlist/shared/store/whishlist.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,7 @@ import { moviesReducer } from './modules/home/shared/store/movies.reducer';
     NavegationBarComponent,
     FontAwesomeModule,
     FooterComponent,
-    StoreModule.forRoot({ movies: moviesReducer }),
+    StoreModule.forRoot({ movies: moviesReducer, whishlist: whishlistReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent],

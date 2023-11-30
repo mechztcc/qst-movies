@@ -3,13 +3,13 @@
   (mouseenter)="isHover = true"
   (mouseleave)="isHover = false"
 >
-  <img
-    class="rounded-lg"
-    [src]="movie.image"
-    alt=""
-  />
+  <img class="rounded-lg" [src]="movie.image" alt="" />
 
-  <div class="play absolute top-1/2 w-full flex justify-center" *ngIf="isHover" (click)="onNavigate()">
+  <div
+    class="play absolute top-1/2 w-full flex justify-center"
+    *ngIf="isHover"
+    (click)="onNavigate()"
+  >
     <fa-icon [icon]="icons.play" [size]="'3x'" class=""></fa-icon>
   </div>
   <footer class="absolute left-0 bottom-0 top-50 right-0 p-4">
@@ -19,9 +19,18 @@
     <div class="flex items-center justify-between">
       <div class="flex">
         <fa-icon [icon]="icons.star" class="text-yellow-500"></fa-icon>
-        <span class="text-white font-semibold ml-1">{{ movie.score }} ({{ movie.totalScore }})</span>
+        <span class="text-white font-semibold ml-1"
+          >{{ movie.score }} ({{ movie.totalScore }})</span
+        >
       </div>
-      <fa-icon [icon]="icons.heart" class="text-red-400"></fa-icon>
+      <fa-icon
+        [icon]="icons.heart"
+        [ngClass]="{
+          'text-red-400': isOnWishlist,
+          'text-slate-100': !isOnWishlist
+        }"
+        (click)="onAddToWishList()"
+      ></fa-icon>
     </div>
     <div class="flex">
       <span>{{ movie.release }}</span>

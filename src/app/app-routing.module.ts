@@ -7,6 +7,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'whishlist',
+    loadChildren: () =>
+      import('./modules/whishlist/whishlist.module').then(
+        (m) => m.WhishlistModule
+      ),
+  },
 ];
 
 @NgModule({

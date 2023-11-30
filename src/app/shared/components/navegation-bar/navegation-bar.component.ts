@@ -9,13 +9,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ScreenInformationService } from '../../services/screen-information/screen-information.service';
 import { NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navegation-bar',
   standalone: true,
   templateUrl: './navegation-bar.component.html',
   styleUrls: ['./navegation-bar.component.scss'],
-  imports: [FontAwesomeModule, NgIf],
+  imports: [FontAwesomeModule, NgIf, RouterModule],
 })
 export class NavegationBarComponent {
   icons = {
