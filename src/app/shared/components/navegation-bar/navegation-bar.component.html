@@ -1,10 +1,16 @@
 <nav class="flex items-center justify-between shadow-lg bg-slate-900 p-4">
-  <h1 class="text-3xl ml-3 dark:text-white text-slate-100">Movies</h1>
+  <h1 class="text-3xl ml-3 dark:text-white text-slate-100">XPlay</h1>
 
-  <div class="flex">
-    <button class="btn-primary">
-      <fa-icon [icon]="icons.whish"></fa-icon>
-    </button>
-    <button class="btn-primary">Login</button>
+  <div class="flex text-white items-center">
+    <div class="relative mr-5">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <fa-icon [icon]="icons.search"></fa-icon>
+      </div>
+      <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search by name" required>
+    </div>
+
+    <h1 class="text-1xl cursor-pointer">TOP MOVIES</h1>
+    <h1 class="text-1xl mx-5 cursor-pointer">CATEGORIES</h1>
+    <h1 class="text-1xl mx-5 cursor-pointer">WISHLIST</h1>
   </div>
 </nav>
