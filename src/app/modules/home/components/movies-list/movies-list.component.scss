@@ -1,0 +1,20 @@
+.card {
+    width: 250px;
+}
+
+ul {
+	display: flex;
+	padding: 25px 0px;
+	list-style: none;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+ul::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-track {
+	border-radius: 92px;
+}
+
+ul::-webkit-scrollbar {
+	height: 12px;
+}

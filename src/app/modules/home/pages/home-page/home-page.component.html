@@ -1,20 +1,5 @@
 <app-movie-carousel></app-movie-carousel>
 
-<div class="flex items-center">
-  <button class="border rounded-lg p-3 dark:border-slate-400 mx-5 h-20">
-    <fa-icon [icon]="icons.left" class="dark:text-slate-700"></fa-icon>
-  </button>
-  <div class="flex overflow-x-scroll mx-5 my-3">
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-    <app-movie-card></app-movie-card>
-  </div>
-  <button class="border rounded-lg p-3 dark:border-slate-400 mx-5 h-20">
-    <fa-icon [icon]="icons.right" class="dark:text-slate-700"></fa-icon>
-  </button>
-</div>
+<app-movies-list [title]="'Featured Movies'"></app-movies-list>
+<app-movies-list [title]="'Horror'"></app-movies-list>
+<app-movies-list [title]="'Action'"></app-movies-list>

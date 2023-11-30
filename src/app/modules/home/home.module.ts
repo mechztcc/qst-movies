@@ -6,9 +6,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MovieCarouselComponent } from './components/movie-carousel/movie-carousel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MoviesListComponent } from './components/movies-list/movies-list.component';
 
 @NgModule({
-  declarations: [HomePageComponent, MovieCarouselComponent, MovieCardComponent],
+  declarations: [HomePageComponent, MovieCarouselComponent, MovieCardComponent, MoviesListComponent],
   imports: [CommonModule, HomeRoutingModule, FontAwesomeModule],
 })
 export class HomeModule {}

@@ -1,0 +1,41 @@
+<h1 class="font-semibold text-4xl dark:text-yellow-400 text-black mx-10 mt-5">{{ title }}</h1>
+
+<div class="flex items-center md:px-3">
+  <button
+    class="border rounded-lg p-3 dark:border-slate-400 md:mx-5 mx-2 h-20"
+    (click)="moveLeft()"
+  >
+    <fa-icon [icon]="icons.left" class="dark:text-slate-700"></fa-icon>
+  </button>
+  <div class="flex overflow-x-clip md:mx-3 md:my-3">
+    <ul id="scrollable">
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+      <li>
+        <app-movie-card></app-movie-card>
+      </li>
+    </ul>
+  </div>
+  <button
+    class="border rounded-lg p-3 dark:border-slate-400 md:mx-5 mx-2 h-20"
+    (click)="moveRight()"
+  >
+    <fa-icon [icon]="icons.right" class="dark:text-slate-700"></fa-icon>
+  </button>
+</div>
