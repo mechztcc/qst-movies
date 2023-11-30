@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavegationBarComponent } from './shared/components/navegation-bar/navegation-bar.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { StoreModule } from '@ngrx/store';
 import { moviesReducer } from './modules/home/shared/store/movies.reducer';
 import { whishlistReducer } from './modules/whishlist/shared/store/whishlist.reducer';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { NavegationBarComponent } from './shared/components/navegation-bar/navegation-bar.component';
 
 @NgModule({
   declarations: [AppComponent],

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { MovieInterface } from 'src/app/modules/home/shared/types/movie.interface';
+import { ScreenInformationService } from 'src/app/shared/services/screen-information/screen-information.service';
 
 @Component({
   selector: 'app-wishlist-movie',
@@ -11,6 +12,9 @@ export class WishlistMovieComponent {
   @Input() movie: MovieInterface;
 
   icons = {
-    star: faStar
-  }
+    star: faStar,
+    remove: faTrash
+  };
+
+  constructor(public screen: ScreenInformationService) {}
 }
