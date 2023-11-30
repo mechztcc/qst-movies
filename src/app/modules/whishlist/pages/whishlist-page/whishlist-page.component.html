@@ -1,1 +1,5 @@
-<p>whishlist-page works!</p>
+<div class="grid grid-cols-8 min-h-screen">
+  <div class="col-span-6 col-start-2">
+    <app-wishlist-movie *ngFor="let movie of movies" [movie]="movie"></app-wishlist-movie>
+  </div>
+</div>

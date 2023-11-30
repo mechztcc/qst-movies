@@ -9,8 +9,9 @@ import * as selectors from '../../shared/store/whishlist.selectors';
   styleUrls: ['./whishlist-page.component.scss'],
 })
 export class WhishlistPageComponent {
+  movies: MovieInterface[] = [];
   whishlist$ = this.store.select(selectors.allMovies).subscribe((data) => {
-    console.log(data);
+    this.movies = data;
   });
 
   constructor(private store: Store<MovieInterface[]>) {}
