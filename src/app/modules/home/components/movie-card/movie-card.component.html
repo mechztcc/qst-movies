@@ -1,7 +1,13 @@
-<div class="card relative mt-4 rounded-xl mx-2 pickgradient">
+<div
+  class="card relative mt-4 rounded-xl mx-2 pickgradient"
+  (mouseenter)="isHover = true"
+  (mouseleave)="isHover = false"
+>
   <img class="h-full w-full rounded-xl" [src]="movie.image" alt="" />
-
-  <div class="details absolute bottom-5 p-3 w-full">
+  <div class="absolute top-1/2 flex justify-center w-full" *ngIf="isHover">
+    <fa-icon [icon]="icons.play" [size]="'3x'" class="cursor-pointer text-white"></fa-icon>
+  </div>
+  <div class="details absolute bottom-1 p-3 w-full">
     <h3 class="text-white font-semibold text-1xl break-words">
       {{ movie.name }}
     </h3>

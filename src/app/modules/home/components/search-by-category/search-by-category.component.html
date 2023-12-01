@@ -1,0 +1,32 @@
+<div
+  class="card flex flex-col shadow-md p-5 rounded-md mt-4 bg-white dark:bg-slate-900"
+>
+  <div class="flex flex-col">
+    <span class="font-semibold mb-2">Category:</span>
+    <div class="flex flex-wrap">
+      <div
+        class="badge"
+        [ngClass]="{ 'bg-slate-400': selected !== 'crime', 'bg-slate-900': selected == 'crime',}"
+        (click)="onSelect('crime')"
+      >
+        <span class="text-sm"> Thriller/Crime </span>
+      </div>
+
+      <div
+        class="badge"
+        [ngClass]="{ 'bg-slate-400': selected !== 'animation', 'bg-slate-900': selected == 'animation',}"
+        (click)="onSelect('animation')"
+      >
+        <span class="text-sm"> Animation/Comedy </span>
+      </div>
+
+      <div
+        class="badge mt-1 md:mt-0"
+        [ngClass]="{ 'bg-slate-400': selected !== 'all', 'bg-slate-900': selected == 'all',}"
+        (click)="onSelect('all')"
+      >
+        <span class="text-sm"> All </span>
+      </div>
+    </div>
+  </div>
+</div>

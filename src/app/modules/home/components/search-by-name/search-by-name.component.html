@@ -1,4 +1,6 @@
-<div class="card flex flex-col shadow-md p-5 rounded-md mt-5 bg-white dark:bg-slate-900">
+<div
+  class="card flex flex-col shadow-md p-5 rounded-md mt-5 bg-white dark:bg-slate-900"
+>
   <div class="flex flex-col">
     <span class="font-semibold mb-2">Name:</span>
   </div>
@@ -8,11 +10,13 @@
         <fa-icon [icon]="icons.search"></fa-icon>
       </span>
       <input
+        #input
         type="search"
         name="q"
         class="py-2 text-sm text-white rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900 w-full border"
         placeholder="Search..."
         autocomplete="off"
+        formControlName="name"
       />
     </div>
   </form>
