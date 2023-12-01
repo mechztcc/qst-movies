@@ -15,6 +15,10 @@
         *ngFor="let movie of moviesFiltered"
         [movie]="movie"
       ></app-movie-card>
+
+      <div class="flex justify-center items-center mt-5" *ngIf="moviesFiltered.length == 0">
+        <h2 class="text-3xl">No Film was found.</h2>
+      </div>
     </div>
   </div>
 </div>
