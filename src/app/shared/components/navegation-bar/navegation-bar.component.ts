@@ -10,6 +10,7 @@ import {
 import { ScreenInformationService } from '../../services/screen-information/screen-information.service';
 import { NgIf } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ThemeService } from '../../services/theme/theme.service';
 
 @Component({
   selector: 'app-navegation-bar',
@@ -27,5 +28,8 @@ export class NavegationBarComponent {
     heart: faHeart,
   };
 
-  constructor(public screen: ScreenInformationService) {}
+  constructor(
+    public screen: ScreenInformationService,
+    public theme: ThemeService
+  ) {}
 }

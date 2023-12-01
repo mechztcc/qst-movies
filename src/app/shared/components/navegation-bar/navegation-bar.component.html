@@ -1,6 +1,15 @@
 <nav class="flex items-center justify-between shadow-lg bg-slate-900 p-4">
-  <h1 class="text-5xl ml-3 dark:text-white text-slate-100 cursor-pointer" routerLink="/">XPlay</h1>
+  <h1
+    class="text-5xl ml-3 dark:text-white text-slate-100 cursor-pointer"
+    routerLink="/"
+  >
+    XPlay
+  </h1>
   <div class="flex text-white items-center" *ngIf="screen.innerWidth >= 535">
+    <h2 class="text-2xl cursor-pointer mr-5" (click)="theme.onToggle()">
+      <fa-icon [icon]="icons.sun"></fa-icon>
+      THEME
+    </h2>
     <h2 class="text-2xl cursor-pointer mr-5" routerLink="/search">
       <fa-icon [icon]="icons.search"></fa-icon>
       SEARCH
@@ -8,6 +17,18 @@
     <h2 class="text-2xl mx-5 cursor-pointer" routerLink="/whishlist">
       <fa-icon [icon]="icons.heart"></fa-icon>
       Favorites
+    </h2>
+  </div>
+
+  <div class="flex text-white items-center" *ngIf="screen.innerWidth < 535">
+    <h2 class="text-2xl cursor-pointer" (click)="theme.onToggle()">
+      <fa-icon [icon]="icons.sun"></fa-icon>
+    </h2>
+    <h2 class="text-2xl cursor-pointer mx-3" routerLink="/search">
+      <fa-icon [icon]="icons.search"></fa-icon>
+    </h2>
+    <h2 class="text-2xl mx-5 cursor-pointer" routerLink="/whishlist">
+      <fa-icon [icon]="icons.heart"></fa-icon>
     </h2>
   </div>
 </nav>
