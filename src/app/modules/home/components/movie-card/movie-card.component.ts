@@ -24,17 +24,17 @@ export class MovieCardComponent {
     add: faBookmark,
     play: faPlayCircle,
     heart: faHeart,
-    delete: faTrash
+    delete: faTrash,
   };
+
+  movies: MovieInterface[] = [];
+
+
 
   isHover: boolean = false;
   isOnWishlist: boolean = false;
-  isSelected$ = this.store.select(selectors.allMovies).subscribe((data) => {
-    data.map((movie) => {
-      if (movie?.id === this.movie?.id) {
-        this.isOnWishlist = true;
-      }
-    });
+  allMovies$ = this.store.select(selectors.allMovies).subscribe((movies) => {
+    this.movies = movies;
   });
 
   constructor(private store: Store<MovieInterface[]>) {}
@@ -45,5 +45,11 @@ export class MovieCardComponent {
 
   onAddToWishList() {
     this.store.dispatch(WhislistActions.addMovie({ payload: this.movie }));
+  }
+
+  onRemoveFromWishList() {
+    this.store.dispatch(
+      WhislistActions.removeMovie({ movieId: this.movie.id })
+    );
   }
 }

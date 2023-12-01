@@ -31,5 +31,6 @@ import { SearchByCategoryComponent } from './components/search-by-category/searc
     FontAwesomeModule,
     ReactiveFormsModule,
   ],
+  exports: [MovieCardComponent],
 })
 export class HomeModule {}

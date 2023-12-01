@@ -5,7 +5,11 @@
 >
   <img class="h-full w-full rounded-xl" [src]="movie.image" alt="" />
   <div class="absolute top-1/2 flex justify-center w-full" *ngIf="isHover">
-    <fa-icon [icon]="icons.play" [size]="'3x'" class="cursor-pointer text-white"></fa-icon>
+    <fa-icon
+      [icon]="icons.play"
+      [size]="'3x'"
+      class="cursor-pointer text-white"
+    ></fa-icon>
   </div>
   <div class="details absolute bottom-1 p-3 w-full">
     <h3 class="text-white font-semibold text-1xl break-words">
@@ -14,9 +18,9 @@
     <div class="flex items-center justify-between">
       <div class="flex">
         <fa-icon [icon]="icons.star" class="text-yellow-500"></fa-icon>
-        <span class="text-white font-semibold ml-1"
-          >{{ movie.score }} ({{ movie.totalScore }})</span
-        >
+        <span class="text-white font-semibold ml-1">
+          {{ movie.score }} ({{ movie.totalScore }})
+        </span>
       </div>
     </div>
     <div class="flex text-white">
@@ -25,8 +29,11 @@
       <span class="mx-3">{{ movie.age }}</span>
     </div>
 
-    <button class="btn-primary w-full mt-3" (click)="onAddToWishList()">
+    <button class="btn-primary w-full mt-3" (click)="onAddToWishList()" *ngIf="!movies.includes(movie)">
       ADD TO WHISHLIST
+    </button>
+    <button class="btn-secondary w-full mt-3" (click)="onRemoveFromWishList()" *ngIf="movies.includes(movie)">
+      REMOVE FROM WHISHLIST
     </button>
   </div>
 </div>

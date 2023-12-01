@@ -1,12 +1,18 @@
 <div class="grid grid-cols-8 min-h-screen">
   <div class="col-span-6 col-start-2 mt-10" *ngIf="movies.length > 0">
-    <app-wishlist-movie
-      *ngFor="let movie of movies"
-      [movie]="movie"
-    ></app-wishlist-movie>
+    <div class="flex flex-wrap">
+      <app-movie-card
+        [movie]="movie"
+        *ngFor="let movie of movies"
+        [movie]="movie"
+      ></app-movie-card>
+    </div>
   </div>
 
-  <div class="col-span-6 col-start-2 flex flex-col justify-center items-center" *ngIf="movies.length == 0">
+  <div
+    class="col-span-6 col-start-2 flex flex-col justify-center items-center"
+    *ngIf="movies.length == 0"
+  >
     <app-empty-wishlist></app-empty-wishlist>
   </div>
 </div>

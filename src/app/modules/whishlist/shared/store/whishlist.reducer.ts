@@ -27,9 +27,12 @@ export const whishlistReducer = createReducer(
     return { ...state, wishlist: [...state.wishlist, payload] };
   }),
   on(WhislistActions.removeMovie, (state, { movieId }) => {
+    const newWhishlist = state.wishlist.filter((movie) => {
+      return movie.id !== movieId;
+    });
     return {
       ...state,
-      wishlist: state.wishlist.filter((movie) => movie.id !== movieId),
+      wishlist: newWhishlist,
     };
   })
 );
