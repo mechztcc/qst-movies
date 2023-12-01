@@ -5,7 +5,7 @@
     <span class="font-semibold mb-2">Category:</span>
     <div class="flex flex-wrap">
       <div
-        class="badge"
+        class="badge my-1"
         [ngClass]="{ 'bg-slate-400': selected !== 'crime', 'bg-slate-800': selected == 'crime',}"
         (click)="onSelect('crime')"
       >
@@ -13,7 +13,7 @@
       </div>
 
       <div
-        class="badge"
+        class="badge my-1"
         [ngClass]="{ 'bg-slate-400': selected !== 'animation', 'bg-slate-800': selected == 'animation',}"
         (click)="onSelect('animation')"
       >
@@ -21,7 +21,7 @@
       </div>
 
       <div
-        class="badge mt-1 md:mt-0"
+        class="badge my-1 md:mt-0"
         [ngClass]="{ 'bg-slate-400': selected !== 'all', 'bg-slate-800': selected == 'all',}"
         (click)="onSelect('all')"
       >

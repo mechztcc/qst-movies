@@ -30,10 +30,10 @@
       <span class="mx-3">{{ movie.age }}</span>
     </div>
 
-    <button class="btn-primary w-full mt-3" (click)="onAddToWishList()" *ngIf="!movies.includes(movie)">
+    <button class="btn-primary w-full mt-3" (click)="onAddToWishList()" *ngIf="!isOnWhishlist">
       ADD TO WHISHLIST
     </button>
-    <button class="btn-secondary w-full mt-3" (click)="onRemoveFromWishList()" *ngIf="movies.includes(movie)">
+    <button class="btn-secondary w-full mt-3" (click)="onRemoveFromWishList()" *ngIf="isOnWhishlist">
       REMOVE FROM WHISHLIST
     </button>
   </div>

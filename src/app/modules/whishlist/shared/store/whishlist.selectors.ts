@@ -6,4 +6,3 @@ export const allMovies = createSelector(selectWishlist, (store) => {
   return store.wishlist;
 });
 
-
