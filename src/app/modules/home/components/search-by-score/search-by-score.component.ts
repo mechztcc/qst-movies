@@ -9,15 +9,14 @@ import {
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { SearchEngineService } from '../../shared/services/search-engine.service';
 
 @Component({
   selector: 'app-search-by-score',
   templateUrl: './search-by-score.component.html',
   styleUrls: ['./search-by-score.component.scss'],
 })
-export class SearchByScoreComponent implements OnInit, OnChanges {
-  @Input() clearFilters: boolean = false;
-  @Output() search: EventEmitter<string> = new EventEmitter();
+export class SearchByScoreComponent implements OnInit {
   icons = {
     star: faStar,
   };
@@ -27,19 +26,12 @@ export class SearchByScoreComponent implements OnInit, OnChanges {
     return this.form.controls['value'].value;
   }
 
-  stars: number[] = [1,2,3,4,5,6,7,8,9];
+  stars: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, public search: SearchEngineService) {}
 
   ngOnInit(): void {
     this.initForm();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.clearFilters) {
-      this.form.controls['value'].setValue(10);
-      this.stars = [1,2,3,4,5,6,7,8,9];
-    }
   }
 
   initForm() {
@@ -54,6 +46,6 @@ export class SearchByScoreComponent implements OnInit, OnChanges {
     for (let index = 0; index < value; index++) {
       this.stars.push(index);
     }
-    this.search.emit(`${this.formValue}.0`);
+    this.search.onSearchByScore(value);
   }
 }

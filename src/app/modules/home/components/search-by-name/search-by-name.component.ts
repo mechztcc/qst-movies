@@ -2,12 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
-  EventEmitter,
-  Input,
-  OnChanges,
   OnInit,
-  Output,
-  SimpleChanges,
   ViewChild,
 } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -19,6 +14,7 @@ import {
   fromEvent,
   tap,
 } from 'rxjs';
+import { SearchEngineService } from '../../shared/services/search-engine.service';
 
 @Component({
   selector: 'app-search-by-name',
@@ -26,7 +22,6 @@ import {
   styleUrls: ['./search-by-name.component.scss'],
 })
 export class SearchByNameComponent implements OnInit, AfterViewInit {
-  @Output() search: EventEmitter<string> = new EventEmitter();
   @ViewChild('input') input: ElementRef;
 
   icons = {
@@ -38,7 +33,7 @@ export class SearchByNameComponent implements OnInit, AfterViewInit {
     return this.form.controls['name'].value;
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, public search: SearchEngineService) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -51,8 +46,8 @@ export class SearchByNameComponent implements OnInit, AfterViewInit {
         debounceTime(1000),
         distinctUntilChanged(),
         tap((text) => {
-          this.search.emit(this.formValue);
-          this.form.reset()
+          this.search.onFilterByName(this.formValue);
+          this.form.reset();
         })
       )
       .subscribe();

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { SearchEngineService } from '../../shared/services/search-engine.service';
 
 @Component({
   selector: 'app-search-by-category',
@@ -6,11 +7,5 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-by-category.component.scss'],
 })
 export class SearchByCategoryComponent {
-  @Output() search: EventEmitter<string> = new EventEmitter();
-  selected: string = 'all';
-
-  onSelect(name: string) {
-    this.selected = name;
-    this.search.emit(name);
-  }
+  constructor(public search: SearchEngineService) {}
 }

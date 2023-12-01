@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 import { SearchByCategoryComponent } from './components/search-by-category/search-by-category.component';
 import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-details-page.component';
+import { SearchByReleaseComponent } from './components/search-by-release/search-by-release.component';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-deta
     SearchByNameComponent,
     SearchByCategoryComponent,
     MovieDetailsPageComponent,
+    SearchByReleaseComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +35,10 @@ import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-deta
     FontAwesomeModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
   ],
   exports: [MovieCardComponent],
+  providers: [provideNgxMask()],
 })
 export class HomeModule {}

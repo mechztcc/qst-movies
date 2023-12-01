@@ -1,22 +1,30 @@
 <div class="grid grid-cols-8 mt-20" style="min-height: 90dvh">
   <div class="col-span-8 md:col-span-2 mx-5">
-    <h1 class="text-3xl">Founded {{ moviesFiltered.length }} movie(s)</h1>
-    <app-search-by-name (search)="onFilterByName($event)"></app-search-by-name>
-    <app-search-by-score
-      (search)="onFilterByScore($event)"
-      [clearFilters]="clearFilters"
-    ></app-search-by-score>
-    <app-search-by-category (search)="onFilterByCategory($event)"></app-search-by-category>
+    <h1 class="text-3xl">Founded {{ search.moviesFiltered.length }} movie(s)</h1>
+    <div
+      class="badge bg-slate-900 flex items-center justify-center my-3 cursor-pointer"
+      (click)="onClearFilters()"
+    >
+      <fa-icon [icon]="icons.remove" class="mx-2"></fa-icon>
+      Clear All Filters
+    </div>
+    <app-search-by-name></app-search-by-name>
+    <app-search-by-score></app-search-by-score>
+    <app-search-by-category></app-search-by-category>
+    <app-search-by-release></app-search-by-release>
   </div>
 
   <div class="col-span-8 md:col-span-6">
     <div class="flex flex-wrap justify-center">
       <app-movie-card
-        *ngFor="let movie of moviesFiltered"
+        *ngFor="let movie of search.moviesFiltered"
         [movie]="movie"
       ></app-movie-card>
 
-      <div class="flex justify-center items-center mt-5" *ngIf="moviesFiltered.length == 0">
+      <div
+        class="flex justify-center items-center mt-5"
+        *ngIf="search.moviesFiltered.length == 0"
+      >
         <h2 class="text-3xl">No Film was found.</h2>
       </div>
     </div>

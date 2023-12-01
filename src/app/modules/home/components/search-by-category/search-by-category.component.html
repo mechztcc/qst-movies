@@ -6,24 +6,24 @@
     <div class="flex flex-wrap">
       <div
         class="badge my-1"
-        [ngClass]="{ 'bg-slate-400': selected !== 'crime', 'bg-slate-800': selected == 'crime',}"
-        (click)="onSelect('crime')"
+        [ngClass]="{ 'bg-slate-400': search.category !== 'crime', 'bg-slate-800': search.category == 'crime',}"
+        (click)="search.onSearchByCategory('crime')"
       >
         <span class="text-sm"> Thriller/Crime </span>
       </div>
 
       <div
         class="badge my-1"
-        [ngClass]="{ 'bg-slate-400': selected !== 'animation', 'bg-slate-800': selected == 'animation',}"
-        (click)="onSelect('animation')"
+        [ngClass]="{ 'bg-slate-400': search.category !== 'animation', 'bg-slate-800': search.category == 'animation',}"
+        (click)="search.onSearchByCategory('animation')"
       >
         <span class="text-sm"> Animation/Comedy </span>
       </div>
 
       <div
         class="badge my-1 md:mt-0"
-        [ngClass]="{ 'bg-slate-400': selected !== 'all', 'bg-slate-800': selected == 'all',}"
-        (click)="onSelect('all')"
+        [ngClass]="{ 'bg-slate-400': search.category !== 'all', 'bg-slate-800': search.category == 'all',}"
+        (click)="search.onSearchByCategory('all')"
       >
         <span class="text-sm"> All </span>
       </div>
