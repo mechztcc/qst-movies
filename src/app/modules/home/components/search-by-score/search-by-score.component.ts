@@ -13,6 +13,9 @@ export class SearchByScoreComponent implements OnInit {
   };
 
   form: FormGroup;
+  get formValue() {
+    return this.form.controls['value'].value;
+  }
 
   stars: number[] = [1];
 

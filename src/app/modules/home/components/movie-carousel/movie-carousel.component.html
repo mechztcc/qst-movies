@@ -1,13 +1,13 @@
-<div class="carousel relative pickgradient">
+<div class="carousel relative pickgradient text-white">
   <img [src]="selectedMovie.image" class="pickgradient" alt="" />
 
   <div class="absolute left-10 top-10 flex flex-col details">
-    <h1 class="md:text-6xl text-3xl font-semibold">{{ selectedMovie.name }}</h1>
+    <h1 class="md:text-6xl text-3xl font-semibold text-white">{{ selectedMovie.name }}</h1>
     <div class="flex">
       <fa-icon [icon]="icons.star" class="text-yellow-400"></fa-icon>
       <span class="ml-2">{{ selectedMovie.score }} ({{ selectedMovie.totalScore }}) {{ selectedMovie.release }}</span>
     </div>
-    <span class="text-lg md:text-1xl font-semibold">{{ selectedMovie.description }}</span>
+    <span class="text-lg md:text-1xl font-semibold text-white">{{ selectedMovie.description }}</span>
   </div>
 
   <div class="absolute top-1/2 flex justify-between w-full">

@@ -10,6 +10,7 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { SearchByScoreComponent } from './components/search-by-score/search-by-score.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MoviesListComponent,
     SearchPageComponent,
     SearchByScoreComponent,
+    SearchByNameComponent,
   ],
   imports: [
     CommonModule,
