@@ -1,10 +1,13 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { State } from './movies.reducer';
 
-export const selectPhotos = createFeatureSelector<State>('movies');
-export const crimeCategory = createSelector(selectPhotos, (store) => {
+export const selectMovies = createFeatureSelector<State>('movies');
+export const generalMovies = createSelector(selectMovies, (store) => {
+  return [...store.comedy, ...store.crime];
+});
+export const crimeCategory = createSelector(selectMovies, (store) => {
   return store.crime;
 });
-export const comedyCategory = createSelector(selectPhotos, (store) => {
+export const comedyCategory = createSelector(selectMovies, (store) => {
   return store.comedy;
 });

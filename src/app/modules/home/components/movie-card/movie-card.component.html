@@ -1,18 +1,7 @@
-<div
-  class="card rounded-lg relative mx-3 cursor-pointer shadow-lg"
-  (mouseenter)="isHover = true"
-  (mouseleave)="isHover = false"
->
-  <img class="rounded-lg" [src]="movie.image" alt="" />
+<div class="card relative mt-4 rounded-xl mx-2 pickgradient">
+  <img class="h-full w-full rounded-xl" [src]="movie.image" alt="" />
 
-  <div
-    class="play absolute top-1/2 w-full flex justify-center"
-    *ngIf="isHover"
-    (click)="onNavigate()"
-  >
-    <fa-icon [icon]="icons.play" [size]="'3x'" class=""></fa-icon>
-  </div>
-  <footer class="absolute left-0 bottom-0 top-50 right-0 p-4">
+  <div class="details absolute bottom-5 p-3 w-full">
     <h3 class="text-white font-semibold text-1xl break-words">
       {{ movie.name }}
     </h3>
@@ -23,19 +12,15 @@
           >{{ movie.score }} ({{ movie.totalScore }})</span
         >
       </div>
-      <fa-icon
-        [icon]="icons.heart"
-        [ngClass]="{
-          'text-red-400': isOnWishlist,
-          'text-slate-100': !isOnWishlist
-        }"
-        (click)="onAddToWishList()"
-      ></fa-icon>
     </div>
-    <div class="flex">
+    <div class="flex text-white">
       <span>{{ movie.release }}</span>
       <span class="mx-3">{{ movie.duration }}</span>
       <span class="mx-3">{{ movie.age }}</span>
     </div>
-  </footer>
+
+    <button class="btn-primary w-full mt-3" (click)="onAddToWishList()">
+      ADD TO WHISHLIST
+    </button>
+  </div>
 </div>

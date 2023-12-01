@@ -10,7 +10,7 @@
     @apply dark:bg-slate-950 bg-slate-100 dark:text-white;
   }
   .btn-primary {
-    @apply dark:bg-white bg-purple-600 text-white dark:text-slate-700 px-2 rounded py-2 font-semibold shadow-xl hover:opacity-90 mx-1;
+    @apply dark:bg-white bg-purple-600 text-white dark:text-purple-600 px-2 rounded py-2 font-semibold shadow-xl hover:opacity-90;
   }
   .footer {
     @apply p-10 w-full dark:bg-slate-900 bg-slate-900 h-10 flex items-center justify-center mt-5;

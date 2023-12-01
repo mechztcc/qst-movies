@@ -1,6 +1,15 @@
-<div class="grid grid-cols-8" style="min-height: 90dvh;">
+<div class="grid grid-cols-8 mt-20" style="min-height: 90dvh">
   <div class="col-span-8 md:col-span-2 mx-5">
     <app-search-by-name></app-search-by-name>
     <app-search-by-score></app-search-by-score>
+  </div>
+
+  <div class="col-span-8 md:col-span-6">
+    <div class="flex flex-wrap justify-center">
+      <app-movie-card
+        *ngFor="let movie of movies"
+        [movie]="movie"
+      ></app-movie-card>
+    </div>
   </div>
 </div>
