@@ -31,7 +31,7 @@ export class MovieCardComponent {
   isOnWishlist: boolean = false;
   isSelected$ = this.store.select(selectors.allMovies).subscribe((data) => {
     data.map((movie) => {
-      if (movie.id === this.movie.id) {
+      if (movie?.id === this.movie?.id) {
         this.isOnWishlist = true;
       }
     });

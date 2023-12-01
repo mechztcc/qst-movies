@@ -1,13 +1,28 @@
-<div class="carousel relative">
-  <img src="https://images5.alphacoders.com/112/1121095.jpg" alt="" />
+<div class="carousel relative pickgradient">
+  <img [src]="selectedMovie.image" class="pickgradient" alt="" />
+
+  <div class="absolute left-10 top-10 flex flex-col details">
+    <h1 class="md:text-6xl text-3xl font-semibold">{{ selectedMovie.name }}</h1>
+    <div class="flex">
+      <fa-icon [icon]="icons.star" class="text-yellow-400"></fa-icon>
+      <span class="ml-2">{{ selectedMovie.score }} ({{ selectedMovie.totalScore }}) {{ selectedMovie.release }}</span>
+    </div>
+    <span class="text-lg md:text-1xl font-semibold">{{ selectedMovie.description }}</span>
+  </div>
+
   <div class="absolute top-1/2 flex justify-between w-full">
-    <button class="border rounded-lg p-3 dark:border-slate-400  mx-5 ">
+    <button
+      class=" rounded-lg p-3 mx-5 bg-white shadow-lg"
+      (click)="onPrevius()"
+    >
       <fa-icon [icon]="icons.left" class="dark:text-slate-700"></fa-icon>
     </button>
 
-    <button class="border rounded-lg p-3 dark:border-slate-400 mx-5">
+    <button
+      class=" rounded-lg p-3 mx-5 bg-white shadow-lg"
+      (click)="onNext()"
+    >
       <fa-icon [icon]="icons.right" class="dark:text-slate-700"></fa-icon>
     </button>
   </div>
-
 </div>

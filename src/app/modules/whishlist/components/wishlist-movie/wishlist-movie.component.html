@@ -20,21 +20,13 @@
         <fa-icon
           (click)="onRemove()"
           [icon]="icons.remove"
-          class="text-red-400"
+          class="text-red-400 mr-3"
           *ngIf="screen.innerWidth < 770"
         ></fa-icon>
       </div>
       <div class="mt-1">
         {{ movie.age }}
       </div>
-
-      <button
-        (click)="onRemove()"
-        class="btn-primary w-full md:w-1/2 absolute bottom-5"
-        *ngIf="screen.innerWidth >= 770"
-      >
-        REMOVE
-      </button>
     </div>
   </div>
 </div>

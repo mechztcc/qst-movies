@@ -1,7 +1,7 @@
 <nav class="flex items-center justify-between shadow-lg bg-slate-900 p-4">
-  <h1 class="text-5xl ml-3 dark:text-white text-slate-100">XPlay</h1>
+  <h1 class="text-5xl ml-3 dark:text-white text-slate-100 cursor-pointer" routerLink="/">XPlay</h1>
   <div class="flex text-white items-center" *ngIf="screen.innerWidth >= 535">
-    <h2 class="text-2xl cursor-pointer mr-5">
+    <h2 class="text-2xl cursor-pointer mr-5" routerLink="/search">
       <fa-icon [icon]="icons.search"></fa-icon>
       SEARCH
     </h2>

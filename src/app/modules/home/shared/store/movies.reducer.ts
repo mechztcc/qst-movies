@@ -149,7 +149,7 @@ export const initialState: State = {
       description: `After an unexpected reunion with his long-lost father, the ragged alley cat Vic, Garfield and his canine friend Odie are forced from their perfectly pampered lives to join Vic on a risky heist.`,
     },
     {
-      id: 10,
+      id: 12,
       name: 'The Nightmare Before Christmas',
       category: 'Animation',
       age: 'free',

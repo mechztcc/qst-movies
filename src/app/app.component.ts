@@ -4,7 +4,7 @@ import { ScreenInformationService } from './shared/services/screen-information/s
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: [],
 })
 export class AppComponent {
   constructor(private screen: ScreenInformationService) {}

@@ -7,9 +7,25 @@ import { MovieCarouselComponent } from './components/movie-carousel/movie-carous
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { SearchByScoreComponent } from './components/search-by-score/search-by-score.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HomePageComponent, MovieCarouselComponent, MovieCardComponent, MoviesListComponent],
-  imports: [CommonModule, HomeRoutingModule, FontAwesomeModule],
+  declarations: [
+    HomePageComponent,
+    MovieCarouselComponent,
+    MovieCardComponent,
+    MoviesListComponent,
+    SearchPageComponent,
+    SearchByScoreComponent,
+  ],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    FontAwesomeModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+  ],
 })
 export class HomeModule {}
