@@ -1,20 +1,14 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { SearchEngineService } from '../../shared/services/search-engine.service';
+import { fade } from 'src/app/shared/animations/fade.animation';
 
 @Component({
   selector: 'app-search-by-score',
   templateUrl: './search-by-score.component.html',
   styleUrls: ['./search-by-score.component.scss'],
+  animations: [fade]
 })
 export class SearchByScoreComponent implements OnInit {
   icons = {

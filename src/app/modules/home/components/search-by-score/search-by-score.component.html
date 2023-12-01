@@ -1,11 +1,26 @@
-<div class="card flex flex-col shadow-md p-5 rounded-md mt-4 bg-white dark:bg-slate-900">
+<div
+  class="card flex flex-col shadow-md p-5 rounded-md mt-4 bg-white dark:bg-slate-900"
+  [@fade]
+>
   <div class="flex flex-col">
     <span class="font-semibold mb-2">Score: {{ formValue }}</span>
     <div class="flex">
-      <fa-icon [icon]="icons.star" class="text-yellow-400 mr-2" *ngFor="let star of stars"></fa-icon>
+      <fa-icon
+        [icon]="icons.star"
+        class="text-yellow-400 mr-2"
+        *ngFor="let star of stars"
+      ></fa-icon>
     </div>
   </div>
   <form [formGroup]="form">
-    <input class="w-full" type="range" step="1" min="1" max="10" formControlName="value" (change)="onChange()" />
+    <input
+      class="w-full"
+      type="range"
+      step="1"
+      min="1"
+      max="10"
+      formControlName="value"
+      (change)="onChange()"
+    />
   </form>
 </div>

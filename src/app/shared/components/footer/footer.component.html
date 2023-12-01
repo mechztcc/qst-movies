@@ -1,17 +1,16 @@
-<footer class="footer">
-  <fa-icon
-    [icon]="icons.facebook"
-    [size]="'2x'"
-    class="dark:text-white text-white"
-  ></fa-icon>
-  <fa-icon
-    [icon]="icons.instagram"
-    [size]="'2x'"
-    class="mx-3 dark:text-white text-white"
-  ></fa-icon>
-  <fa-icon
-    [icon]="icons.youtube"
-    [size]="'2x'"
-    class="dark:text-white text-white"
-  ></fa-icon>
+<footer class="footer flex items-center" [@fade] style="min-height: 300px">
+  <a href="https://github.com/mechztcc">
+    <fa-icon
+      [icon]="icons.git"
+      [size]="'2x'"
+      class="dark:text-white text-white"
+    ></fa-icon>
+  </a>
+  <a href="https://www.linkedin.com/in/alberto-paiva-8ba467137/" class="mx-3">
+    <fa-icon
+      [icon]="icons.linkedin"
+      [size]="'2x'"
+      class="dark:text-white text-white"
+    ></fa-icon>
+  </a>
 </footer>

@@ -11,11 +11,13 @@ import { Store } from '@ngrx/store';
 import { WhislistActions } from '../../../whishlist/shared/store/whishlist.actions';
 import * as selectors from '../../../whishlist/shared/store/whishlist.selectors';
 import { MovieInterface } from '../../shared/types/movie.interface';
+import { fade } from 'src/app/shared/animations/fade.animation';
 
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss'],
+  animations: [fade]
 })
 export class MovieCardComponent implements OnDestroy, OnInit {
   @Input() movie: MovieInterface;

@@ -5,17 +5,19 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { MovieInterface } from '../../shared/types/movie.interface';
+import { fade } from 'src/app/shared/animations/fade.animation';
 
 @Component({
   selector: 'app-movie-carousel',
   templateUrl: './movie-carousel.component.html',
   styleUrls: ['./movie-carousel.component.scss'],
+  animations: [fade],
 })
 export class MovieCarouselComponent implements OnInit {
   icons = {
     left: faChevronLeft,
     right: faChevronRight,
-    star: faStar
+    star: faStar,
   };
 
   movies: MovieInterface[] = [
@@ -47,13 +49,18 @@ export class MovieCarouselComponent implements OnInit {
     },
   ];
 
-  selectedMovie: MovieInterface = this.movies[0];
+  index: number = 0;
+  selectedMovie: MovieInterface = this.movies[this.index];
 
   ngOnInit(): void {
     setInterval(() => {
-      this.movies.map((movie, index) => {
-        this.selectedMovie = movie;
-      });
+      if (this.index == 0) {
+        this.selectedMovie = this.movies[1];
+        this.index = 1;
+      } else {
+        this.index = 0;
+        this.selectedMovie = this.movies[0];
+      }
     }, 5000);
   }
 

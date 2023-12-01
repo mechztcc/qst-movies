@@ -15,11 +15,13 @@ import {
   tap,
 } from 'rxjs';
 import { SearchEngineService } from '../../shared/services/search-engine.service';
+import { fade } from 'src/app/shared/animations/fade.animation';
 
 @Component({
   selector: 'app-search-by-name',
   templateUrl: './search-by-name.component.html',
   styleUrls: ['./search-by-name.component.scss'],
+  animations: [fade]
 })
 export class SearchByNameComponent implements OnInit, AfterViewInit {
   @ViewChild('input') input: ElementRef;
