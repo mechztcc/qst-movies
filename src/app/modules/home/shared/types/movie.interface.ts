@@ -9,4 +9,5 @@ export interface MovieInterface {
   totalScore: string;
   image: string;
   duration: string;
+  embed?: string;
 }

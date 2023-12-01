@@ -18,6 +18,7 @@ export const initialState: State = {
       totalScore: '2.8mi',
       duration: '2h 22 min',
       image: 'assets/um-sonho-de-liberdade.jpeg',
+      embed: 'https://www.youtube.com/embed/EIc_wJtm6AU?si=HaXeyRelkd9lDHxX',
       description:
         'Two imprisoned men reunite over the course of several years, finding solace and eventual redemption through acts of common decency.',
     },
@@ -31,6 +32,7 @@ export const initialState: State = {
       totalScore: '2.3mi',
       duration: '2h 55 min',
       image: 'assets/poderoso-chefao.jpeg',
+      embed: 'https://www.youtube.com/embed/SaHZHU-44XA?si=e7CIpa3vVmKIRcSI',
       description:
         'The aging patriarch of an organized crime dynasty passes control of his clandestine empire to his reluctant son.',
     },
@@ -44,6 +46,7 @@ export const initialState: State = {
       totalScore: '2.8mi',
       duration: '2h 32 min',
       image: 'assets/batman.jpg',
+      embed: 'https://www.youtube.com/embed/EXeTwQWrcwY?si=PKH7SB-VAXCyt0Ag',
       description:
         'Now with the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman has what it takes to banish crime from Gotham City once and for all. But soon, the three will fall victim to the Joker, who intends to throw Gotham into anarchy.',
     },
@@ -57,6 +60,7 @@ export const initialState: State = {
       totalScore: '2.2mi',
       duration: '2h 34 min',
       image: 'assets/pulp-fiction.jpg',
+      embed: 'https://www.youtube.com/embed/s7EdQ4FqbhY?si=csb96tMftEonCEN-',
       description:
         'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of thugs intertwine in four stories of violence and redemption.',
     },
@@ -70,6 +74,7 @@ export const initialState: State = {
       totalScore: '2.3mi',
       duration: '2h 19 min',
       image: 'assets/clube-luta.jpg',
+      embed: 'https://www.youtube.com/embed/O1nDozs-LxI?si=BGhq5hqePlMWGkT_',
       description:
         'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of thugs intertwine in four stories of violence and redemption.',
     },
@@ -83,6 +88,7 @@ export const initialState: State = {
       totalScore: '2.3mi',
       duration: '2h 2 min',
       image: 'assets/coringa.webp',
+      embed: 'https://www.youtube.com/embed/zAGVQLHvwOY?si=hlWZRoXMsT73MEoN',
       description:
         'A failed comedian goes crazy and becomes a psychopathic killer.',
     },
@@ -98,6 +104,7 @@ export const initialState: State = {
       totalScore: '9.7mi',
       duration: '1h 42 min',
       image: 'assets/leo.webp',
+      embed: 'https://www.youtube.com/embed/27M2lZHAllI?si=bebvDqNVCHW4TyKN',
       description: `Leo, a lizard, has been trapped in a Florida classroom for decades. Upon discovering that he only has one year left to live, he comes up with an escape to make the most of the time he has left, but ends up involved in the students' problems with a cruel teacher.`,
     },
     {
@@ -110,6 +117,7 @@ export const initialState: State = {
       totalScore: '6.1mi',
       duration: '1h 35 min',
       image: 'assets/trolls.webp',
+      embed: 'https://www.youtube.com/embed/Hngoa54sLk4?si=VFhd1fBPOdk41LHQ',
       description: `As they get closer, Poppy discovers that Tronco was part of her favorite boyband phenomenon, BroZone, with her four brothers. When one of their own, Floyd, is kidnapped by villains, Tronco and Poppy embark on a journey to rescue him.`,
     },
     {
@@ -122,6 +130,7 @@ export const initialState: State = {
       totalScore: '82mi',
       duration: '1h 25 min',
       image: 'assets/grinch.jpg',
+      embed: 'https://www.youtube.com/embed/vjnqABgxfO0?si=U9jCLUsRYatYpXrn',
       description: `A grumpy Grinch plans to ruin Christmas for the town of Whoville.`,
     },
     {
@@ -134,6 +143,7 @@ export const initialState: State = {
       totalScore: '206mi',
       duration: '1h 32 min',
       image: 'assets/mario.jpg',
+      embed: 'https://www.youtube.com/embed/cDNkh5WybZo?si=Xtdl7If_HVvCqXT_',
       description: `A plumber named Mario needs to save his brother Luigi from the claws of the king of Koopas, Bowser. To do this, he counts on the help of the princess of the Mushroom Kingdom, Peach, and his friends Toad and Donkey Kong.`,
     },
     {
@@ -146,6 +156,7 @@ export const initialState: State = {
       totalScore: '10mi',
       duration: '2h 45 min',
       image: 'assets/garfield.jpg',
+      embed: 'https://www.youtube.com/embed/IeFWNtMo1Fs?si=FGcYfxqBNE4AHkN5',
       description: `After an unexpected reunion with his long-lost father, the ragged alley cat Vic, Garfield and his canine friend Odie are forced from their perfectly pampered lives to join Vic on a risky heist.`,
     },
     {
@@ -158,6 +169,7 @@ export const initialState: State = {
       totalScore: '367mil',
       duration: '1h 16 min',
       image: 'assets/jack.jpg',
+      embed: 'https://www.youtube.com/embed/ZVuToMilP0A?si=6XoaccDUyRaHYNfe',
       description: `Jack Skellington, the king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas into Halloween cause confusion.`,
     },
   ],

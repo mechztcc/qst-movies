@@ -12,6 +12,7 @@ import { SearchByScoreComponent } from './components/search-by-score/search-by-s
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 import { SearchByCategoryComponent } from './components/search-by-category/search-by-category.component';
+import { MovieDetailsPageComponent } from './pages/movie-details-page/movie-details-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SearchByCategoryComponent } from './components/search-by-category/searc
     SearchByScoreComponent,
     SearchByNameComponent,
     SearchByCategoryComponent,
+    MovieDetailsPageComponent,
   ],
   imports: [
     CommonModule,

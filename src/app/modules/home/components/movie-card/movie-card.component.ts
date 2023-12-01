@@ -11,6 +11,7 @@ import { MovieInterface } from '../../shared/types/movie.interface';
 import { Store } from '@ngrx/store';
 import { WhislistActions } from '../../../whishlist/shared/store/whishlist.actions';
 import * as selectors from '../../../whishlist/shared/store/whishlist.selectors';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-card',
@@ -29,18 +30,15 @@ export class MovieCardComponent {
 
   movies: MovieInterface[] = [];
 
-
-
   isHover: boolean = false;
-  isOnWishlist: boolean = false;
   allMovies$ = this.store.select(selectors.allMovies).subscribe((movies) => {
     this.movies = movies;
   });
 
-  constructor(private store: Store<MovieInterface[]>) {}
+  constructor(private store: Store<MovieInterface[]>, private router: Router) {}
 
   onNavigate() {
-    console.log('navigating');
+    this.router.navigate([`/movies/${this.movie.id}/details`]);
   }
 
   onAddToWishList() {

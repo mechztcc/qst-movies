@@ -1,0 +1,40 @@
+<div class="flex flex-col">
+  <iframe
+    class="w-full"
+    style="min-height: 60vh"
+    [src]="embed()"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer autoplay"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="mx-4 mt-5">
+  <a routerLink="/" class="text-2xl">
+    <fa-icon [icon]="icons.back"></fa-icon>
+    Back Navegation
+  </a>
+</div>
+
+<div class="grid grid-cols-8 mx-4 mt-10 mb-20">
+  <div class="col-span-8 md:col-span-3 flex justify-center">
+    <img class="rounded-lg w-1/2" [src]="movie.image" alt="" />
+  </div>
+  <div
+    class="col-span-8 md:col-span-5 flex flex-col justify-start mt-4 md:mt-0"
+  >
+    <h1 class="text-3xl font-semibold">{{ movie.name }}</h1>
+    <span class="mt-4"> {{ movie.description }}</span>
+
+    <div class="flex flex-col mt-3">
+      <span class="font-semibold">Duration</span>
+      <span>{{ movie.duration }}</span>
+    </div>
+
+    <div class="flex flex-col">
+      <span class="font-semibold">Release</span>
+      <span>{{ movie.release }}</span>
+    </div>
+  </div>
+</div>
